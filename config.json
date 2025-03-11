@@ -1,0 +1,148 @@
+{
+    "DoorWarn": [
+        {
+            "bitoffset": 0,
+            "byteoffset": 0,
+            "type": "BOOL",
+            "name": "AuxLockLoAbnormal",
+            "len": 1
+        },
+        {
+            "bitoffset": 1,
+            "byteoffset": 0,
+            "type": "BOOL",
+            "name": "AuxLockUnloAbnormal",
+            "len": 1
+        },
+        {
+            "bitoffset": 3,
+            "byteoffset": 0,
+            "type": "BOOL",
+            "name": "ClosedSwAbnormal",
+            "len": 1
+        },
+        {
+            "bitoffset": 4,
+            "byteoffset": 0,
+            "type": "BOOL",
+            "name": "ClCurrentOver",
+            "len": 1
+        },
+        {
+            "bitoffset": 5,
+            "byteoffset": 0,
+            "type": "BOOL",
+            "name": "OpCurrentOver",
+            "len": 1
+        },
+        {
+            "bitoffset": 6,
+            "byteoffset": 0,
+            "type": "BOOL",
+            "name": "ClTimeOver",
+            "len": 1
+        },
+        {
+            "bitoffset": 7,
+            "byteoffset": 0,
+            "type": "BOOL",
+            "name": "OpTimeOver",
+            "len": 1
+        },
+        {
+            "bitoffset": 7,
+            "byteoffset": 4,
+            "type": "BOOL",
+            "name": "OpSealAdhesionAbnormal",
+            "len": 1
+        },
+        {
+            "bitoffset": 6,
+            "byteoffset": 4,
+            "type": "BOOL",
+            "name": "PositionAbnormal",
+            "len": 1
+        },
+        {
+            "bitoffset": 5,
+            "byteoffset": 4,
+            "type": "BOOL",
+            "name": "ClCresistanceOver",
+            "len": 1
+        },
+        {
+            "bitoffset": 4,
+            "byteoffset": 5,
+            "type": "BOOL",
+            "name": "OpCresistanceOver",
+            "len": 1
+        }
+    ],
+    "DoorSignal": [
+        {
+            "bitoffset": 0,
+            "byteoffset": 20,
+            "type": "DoorWarn",
+            "name": "D1",
+            "len": 8
+        },
+        {
+            "bitoffset": 0,
+            "byteoffset": 28,
+            "type": "DoorWarn",
+            "name": "D2",
+            "len": 8
+        },
+        {
+            "bitoffset": 0,
+            "byteoffset": 36,
+            "type": "DoorWarn",
+            "name": "D3",
+            "len": 8
+        },
+        {
+            "bitoffset": 0,
+            "byteoffset": 44,
+            "type": "DoorWarn",
+            "name": "D4",
+            "len": 8
+        }
+    ],
+    "WTDSignal": [
+        {
+            "bitoffset": 0,
+            "byteoffset": 2,
+            "type": "UNSIGNED8",
+            "name": "Unit",
+            "len": 1
+        },
+        {
+            "bitoffset": 0,
+            "byteoffset": 10,
+            "type": "DoorSignal",
+            "name": "MDCU1",
+            "len": 100
+        },
+        {
+            "bitoffset": 0,
+            "byteoffset": 110,
+            "type": "DoorSignal",
+            "name": "MDCU2",
+            "len": 100
+        },
+        {
+            "bitoffset": 0,
+            "byteoffset": 210,
+            "type": "DoorSignal",
+            "name": "MDCU3",
+            "len": 100
+        },
+        {
+            "bitoffset": 0,
+            "byteoffset": 310,
+            "type": "DoorSignal",
+            "name": "MDCU4",
+            "len": 100
+        }
+    ]
+}
