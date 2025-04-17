@@ -26,13 +26,23 @@ def main(queue):
         data = queue.get() 
         warn_data = decode_msg(data)
         warn_data = pack_msg(warn_data)
-        print(warn_data)
-        life_data = pack_lifedata()
+        # print(warn_data)
         second = sleeptime(0, 0, 0.2)
         time.sleep(second)
         try:
           client.sendto(warn_data,(DES_IP, DES_PORT))
+          print("预警模型已发送")
+        except Exception as e:
+          print(e)
+    except Exception as e:
+      print(e)
+    try:
+        life_data = pack_lifedata()
+        second = sleeptime(0, 0, 0.2)
+        time.sleep(second)
+        try:
           client.sendto(life_data,(DES_IP, DES_PORT))
+          print("生命周期数据已发送")
         except Exception as e:
           print(e)
     except Exception as e:
