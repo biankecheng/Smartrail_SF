@@ -5,6 +5,7 @@
 import struct as st
 from ctypes import create_string_buffer
 import datetime
+from kbic_logging import logger
 
 class MetaCell():
     def __init__(self, offset, length):
@@ -125,7 +126,7 @@ def cal_crc(data, l):
             crc = (crc & 0xffff)
             if b != 0:
                 crc = crc ^ 0x1021
-    return(crc)
+    return crc
 
 def pack_msg(msg):
     signal = create_string_buffer(500)
@@ -170,7 +171,6 @@ def pack_lifedata():
     crc = cal_crc(signal[0:28],28)
     st.pack_into('>H',signal,28,crc)
     signal = bytes(signal)
-    # print_hex(signal)
     return signal
 
 if __name__ == "__main__":

@@ -1,5 +1,11 @@
+# -*- coding: utf-8 -*-
+"""
+@author: bkc
+"""
+
 import door_rev
 import door_send
+from kbic_logging import logger
 from multiprocessing import Process , Queue
 
 
@@ -49,7 +55,7 @@ class DataService(object):
             for p in self.procs:
                 p.join()
         except Exception as e:
-            print(e)
+            logger.error(e)
 
 
 if __name__ == "__main__":

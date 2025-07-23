@@ -72,7 +72,7 @@
         },
         {
             "bitoffset": 4,
-            "byteoffset": 5,
+            "byteoffset": 4,
             "type": "BOOL",
             "name": "OpCresistanceOver",
             "len": 1
@@ -84,28 +84,28 @@
             "byteoffset": 20,
             "type": "DoorWarn",
             "name": "D1",
-            "len": 8
+            "len": 5
         },
         {
             "bitoffset": 0,
             "byteoffset": 28,
             "type": "DoorWarn",
             "name": "D2",
-            "len": 8
+            "len": 5
         },
         {
             "bitoffset": 0,
             "byteoffset": 36,
             "type": "DoorWarn",
             "name": "D3",
-            "len": 8
+            "len": 5
         },
         {
             "bitoffset": 0,
             "byteoffset": 44,
             "type": "DoorWarn",
             "name": "D4",
-            "len": 8
+            "len": 5
         }
     ],
     "WTDSignal": [

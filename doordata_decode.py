@@ -4,6 +4,7 @@
 """
 import os
 import json
+from kbic_logging import logger
 
 
 # software root path
@@ -52,7 +53,7 @@ def decode_signal(signals_buf, cfg):
             key, value = decode_object(signals_buf, sc)
             signal[key] = value
     except Exception as e:
-        print(e)
+        logger.error(e)
         signal = {}
     return signal
 
@@ -64,7 +65,7 @@ def decode_msgDCU(signals_buf):
         signal= decode_signal(
             sig_buff, signal_config_dict['DoorWarn'])
     except Exception as e:
-        print(e)
+        logger.error(e)
         signal = {}
     return signal
 
@@ -83,7 +84,7 @@ def decode_msg(msg):
                 warn_data = msg_dict['MDCU{}'.format(i)]['D{}'.format(j)]
                 msg_dict['MDCU{}'.format(i)]['D{}'.format(j)] = decode_msgDCU(warn_data)
     except Exception as e:
-        print(e)
+        logger.error(e)
         msg_dict = {}
     return msg_dict
 
